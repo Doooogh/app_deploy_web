@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/styles/variables.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847983625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847983625,
+            "name": "Commit-0",
+            "content": "// 颜色变量\n$--color-primary: #409EFF;\n$--color-success: #67C23A;\n$--color-warning: #E6A23C;\n$--color-danger: #F56C6C;\n$--color-info: #909399;\n\n// 文字颜色\n$--color-text-primary: #303133;\n$--color-text-regular: #606266;\n$--color-text-secondary: #909399;\n$--color-text-placeholder: #C0C4CC;\n\n// 边框颜色\n$--border-color-base: #DCDFE6;\n$--border-color-light: #E4E7ED;\n$--border-color-lighter: #EBEEF5;\n$--border-color-extra-light: #F2F6FC;\n\n// 背景颜色\n$--background-color-base: #F5F7FA;\n\n// 布局相关\n$--sidebar-width: 200px;\n$--header-height: 50px;\n$--navbar-height: 50px;\n\n// 字体大小\n$--font-size-base: 14px;\n$--font-size-small: 13px;\n$--font-size-large: 16px;\n\n// 圆角\n$--border-radius-base: 4px;\n$--border-radius-small: 2px;\n$--border-radius-large: 6px;\n\n// 阴影\n$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);\n$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1); "
+        }
+    ]
+}

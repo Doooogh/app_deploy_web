@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/components/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731848025468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731848025468,
+            "name": "Commit-0",
+            "content": "export { default as Navbar } from '../Navbar'\nexport { default as Sidebar } from '../Sidebar'\nexport { default as AppMain } from './AppMain' "
+        }
+    ]
+}

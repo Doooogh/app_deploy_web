@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/api/deploy.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731849013218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731849013218,
+            "name": "Commit-0",
+            "content": "import request from '@/utils/request'\n\nexport function createDeploy(data) {\n  return request({\n    url: '/deploy/create',\n    method: 'post',\n    data\n  })\n}\n\nexport function getDeployList(params) {\n  return request({\n    url: '/deploy/list',\n    method: 'get',\n    params\n  })\n}\n\nexport function getDeployDetail(id) {\n  return request({\n    url: `/deploy/${id}`,\n    method: 'get'\n  })\n}\n\nexport function getDeployLog(id) {\n  return request({\n    url: `/deploy/${id}/log`,\n    method: 'get'\n  })\n}\n\nexport function getHostLog(deployId, hostId) {\n  return request({\n    url: `/deploy/${deployId}/host/${hostId}/log`,\n    method: 'get'\n  })\n}\n\nexport function cancelDeploy(id) {\n  return request({\n    url: `/deploy/${id}/cancel`,\n    method: 'post'\n  })\n}\n\nexport function rollbackDeploy(id) {\n  return request({\n    url: `/deploy/${id}/rollback`,\n    method: 'post'\n  })\n}\n\nexport function redeployDeploy(id) {\n  return request({\n    url: `/deploy/${id}/redeploy`,\n    method: 'post'\n  })\n} "
+        }
+    ]
+}

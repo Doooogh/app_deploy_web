@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/App.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847935394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847935394,
+            "name": "Commit-0",
+            "content": "<template>\n  <div id=\"app\">\n    <el-container class=\"app-wrapper\">\n      <el-aside width=\"200px\" class=\"sidebar-container\">\n        <sidebar />\n      </el-aside>\n      <el-container>\n        <el-header height=\"50px\" class=\"app-header\">\n          <navbar />\n        </el-header>\n        <el-main class=\"app-main\">\n          <router-view />\n        </el-main>\n      </el-container>\n    </el-container>\n  </div>\n</template>\n\n<script>\nimport Sidebar from '@/components/layout/Sidebar.vue'\nimport Navbar from '@/components/layout/Navbar.vue'\n\nexport default {\n  name: 'App',\n  components: {\n    Sidebar,\n    Navbar\n  }\n}\n</script>\n\n<style lang=\"scss\">\n#app {\n  height: 100vh;\n  .app-wrapper {\n    height: 100%;\n    .sidebar-container {\n      background-color: #304156;\n      height: 100%;\n    }\n    .app-header {\n      background-color: #fff;\n      box-shadow: 0 1px 4px rgba(0,21,41,.08);\n    }\n    .app-main {\n      padding: 20px;\n      background-color: #f0f2f5;\n    }\n  }\n}\n</style>\n"
+        }
+    ]
+}

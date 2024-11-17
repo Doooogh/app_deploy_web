@@ -1,0 +1,58 @@
+// 全局通用样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: $--font-size-base;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+// 页面容器通用样式
+.page-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: $--border-radius-base;
+  min-height: calc(100vh - #{$--header-height} - 40px);
+}
+
+// 操作按钮组
+.operation-group {
+  margin-bottom: 20px;
+  
+  .el-button {
+    margin-right: 10px;
+  }
+}
+
+// 搜索表单
+.search-form {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $--border-color-lighter;
+  
+  .el-form-item {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+// 卡片样式
+.info-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: $--border-radius-base;
+  margin-bottom: 20px;
+  box-shadow: $--box-shadow-light;
+  
+  &__title {
+    font-size: $--font-size-large;
+    color: $--color-text-primary;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+} 

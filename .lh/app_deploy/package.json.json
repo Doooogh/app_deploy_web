@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app_deploy/package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731849277455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731849277455,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"app_deploy\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"workspaces\": [\n    \"web\"\n  ],\n  \"scripts\": {\n    \"dev:web\": \"cd web && npm run dev\",\n    \"build:web\": \"cd web && npm run build\",\n    \"dev:server\": \"cd server && python main.py\",\n    \"install:all\": \"npm install && cd web && npm install && cd ../server && pip install -r requirements.txt\"\n  }\n} "
+        }
+    ]
+}

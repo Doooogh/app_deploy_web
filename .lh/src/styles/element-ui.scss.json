@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/styles/element-ui.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847983665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847983665,
+            "name": "Commit-0",
+            "content": "// element-ui 样式覆盖\n.el-button {\n  &--primary {\n    background-color: $--color-primary;\n  }\n}\n\n// 表单样式统一\n.el-form {\n  .el-form-item {\n    margin-bottom: 22px;\n    \n    &__label {\n      padding-right: 12px;\n      font-weight: normal;\n    }\n  }\n}\n\n// 弹窗统一样式\n.el-dialog {\n  border-radius: $--border-radius-base;\n  \n  &__header {\n    padding: 20px;\n    border-bottom: 1px solid $--border-color-lighter;\n  }\n  \n  &__body {\n    padding: 30px 20px;\n  }\n  \n  &__footer {\n    padding: 20px;\n    border-top: 1px solid $--border-color-lighter;\n    text-align: right;\n  }\n}\n\n// 表格统一样式\n.el-table {\n  th {\n    background-color: #F5F7FA;\n    color: $--color-text-regular;\n    font-weight: 500;\n  }\n  \n  td {\n    padding: 12px 0;\n  }\n}\n\n// 分页统一样式\n.el-pagination {\n  margin-top: 20px;\n  text-align: right;\n} "
+        }
+    ]
+}

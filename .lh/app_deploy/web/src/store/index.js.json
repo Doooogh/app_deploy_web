@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app_deploy/web/src/store/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731850253410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731850253410,
+            "name": "Commit-0",
+            "content": "import { createPinia } from 'pinia'\n\nconst store = createPinia()\n\nexport default store "
+        }
+    ]
+}

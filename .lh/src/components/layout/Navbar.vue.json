@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/Navbar.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847935520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847935520,
+            "name": "Commit-0",
+            "content": "<template>\n  <div class=\"navbar\">\n    <div class=\"left-menu\">\n      <hamburger :is-active=\"!sidebar.collapsed\" @click=\"toggleSidebar\" />\n      <breadcrumb />\n    </div>\n    <div class=\"right-menu\">\n      <el-dropdown trigger=\"click\">\n        <div class=\"avatar-wrapper\">\n          <el-avatar :size=\"30\" icon=\"el-icon-user-solid\"></el-avatar>\n          <i class=\"el-icon-caret-bottom\"></i>\n        </div>\n        <el-dropdown-menu slot=\"dropdown\">\n          <el-dropdown-item>个人信息</el-dropdown-item>\n          <el-dropdown-item divided>退出登录</el-dropdown-item>\n        </el-dropdown-menu>\n      </el-dropdown>\n    </div>\n  </div>\n</template>\n\n<script>\nimport Breadcrumb from '@/components/common/Breadcrumb'\nimport Hamburger from '@/components/common/Hamburger'\n\nexport default {\n  name: 'Navbar',\n  components: {\n    Breadcrumb,\n    Hamburger\n  },\n  computed: {\n    sidebar() {\n      return this.$store.state.app.sidebar\n    }\n  },\n  methods: {\n    toggleSidebar() {\n      this.$store.dispatch('app/toggleSidebar')\n    }\n  }\n}\n</script>\n\n<style lang=\"scss\" scoped>\n.navbar {\n  height: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 0 15px;\n\n  .left-menu {\n    display: flex;\n    align-items: center;\n  }\n\n  .right-menu {\n    .avatar-wrapper {\n      cursor: pointer;\n      display: flex;\n      align-items: center;\n      .el-icon-caret-bottom {\n        margin-left: 5px;\n      }\n    }\n  }\n}\n</style> "
+        }
+    ]
+}

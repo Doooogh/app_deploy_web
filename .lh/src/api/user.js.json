@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/api/user.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731849013048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731849013048,
+            "name": "Commit-0",
+            "content": "import request from '@/utils/request'\n\nexport function login(data) {\n  return request({\n    url: '/user/login',\n    method: 'post',\n    data\n  })\n}\n\nexport function getInfo() {\n  return request({\n    url: '/user/info',\n    method: 'get'\n  })\n}\n\nexport function logout() {\n  return request({\n    url: '/user/logout',\n    method: 'post'\n  })\n} "
+        }
+    ]
+}

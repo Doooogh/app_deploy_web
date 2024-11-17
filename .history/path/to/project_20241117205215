@@ -1,0 +1,28 @@
+deploy-platform/
+├── public/
+├── src/
+│   ├── api/
+│   │   ├── password.js
+│   │   ├── environment.js
+│   │   ├── host.js
+│   │   ├── project.js
+│   │   ├── script.js
+│   │   └── deploy.js
+│   ├── assets/
+│   ├── components/
+│   │   ├── common/
+│   │   └── layout/
+│   ├── router/
+│   ├── store/
+│   ├── styles/
+│   ├── utils/
+│   └── views/
+│       ├── password/
+│       ├── environment/
+│       ├── host/
+│       ├── project/
+│       ├── script/
+│       ├── deploy/
+│       └── dashboard/
+├── tests/
+└── mock/ 

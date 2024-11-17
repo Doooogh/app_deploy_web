@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731849013165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731849013165,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"app_deploy_web\",\n  \"private\": true,\n  \"version\": \"0.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview\",\n    \"serve\": \"vue-cli-service serve\",\n    \"lint\": \"vue-cli-service lint\"\n  },\n  \"dependencies\": {\n    \"vue\": \"^3.5.12\"\n  },\n  \"devDependencies\": {\n    \"@vitejs/plugin-vue\": \"^5.1.4\",\n    \"vite\": \"^5.4.10\"\n  }\n}\n"
+        }
+    ]
+}

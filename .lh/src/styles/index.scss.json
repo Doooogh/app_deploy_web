@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/styles/index.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847983666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847983666,
+            "name": "Commit-0",
+            "content": "@import './variables.scss';\n@import './element-ui.scss';\n@import './common.scss';\n\n// 过渡动画\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity 0.3s ease;\n}\n\n.fade-enter,\n.fade-leave-to {\n  opacity: 0;\n}\n\n// 面包屑动画\n.breadcrumb-enter-active,\n.breadcrumb-leave-active {\n  transition: all .5s;\n}\n\n.breadcrumb-enter,\n.breadcrumb-leave-active {\n  opacity: 0;\n  transform: translateX(20px);\n}\n\n.breadcrumb-move {\n  transition: all .5s;\n}\n\n.breadcrumb-leave-active {\n  position: absolute;\n}\n\n// 滚动条样式\n::-webkit-scrollbar {\n  width: 6px;\n  height: 6px;\n}\n\n::-webkit-scrollbar-track {\n  background: #fff;\n}\n\n::-webkit-scrollbar-thumb {\n  background: #ccc;\n  border-radius: 3px;\n} "
+        }
+    ]
+}

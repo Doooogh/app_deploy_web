@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/Layout.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731848025485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731848025485,
+            "name": "Commit-0",
+            "content": "<template>\n  <div class=\"app-wrapper\">\n    <sidebar class=\"sidebar-container\" />\n    <div class=\"main-container\">\n      <navbar />\n      <app-main />\n    </div>\n  </div>\n</template>\n\n<script>\nimport { Navbar, Sidebar, AppMain } from './components'\n\nexport default {\n  name: 'Layout',\n  components: {\n    Navbar,\n    Sidebar,\n    AppMain\n  }\n}\n</script>\n\n<style lang=\"scss\" scoped>\n.app-wrapper {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  \n  .sidebar-container {\n    position: fixed;\n    top: 0;\n    left: 0;\n    z-index: 1001;\n    width: $--sidebar-width;\n    height: 100%;\n    overflow: hidden;\n    transition: width 0.28s;\n  }\n  \n  .main-container {\n    min-height: 100%;\n    margin-left: $--sidebar-width;\n    position: relative;\n  }\n}\n</style> "
+        }
+    ]
+}

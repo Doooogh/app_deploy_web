@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/store/modules/app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731848072948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731848072948,
+            "name": "Commit-0",
+            "content": "const state = {\n  sidebar: {\n    opened: localStorage.getItem('sidebarStatus') ? !!+localStorage.getItem('sidebarStatus') : true,\n    withoutAnimation: false\n  },\n  device: 'desktop'\n}\n\nconst mutations = {\n  TOGGLE_SIDEBAR: state => {\n    state.sidebar.opened = !state.sidebar.opened\n    state.sidebar.withoutAnimation = false\n    if (state.sidebar.opened) {\n      localStorage.setItem('sidebarStatus', 1)\n    } else {\n      localStorage.setItem('sidebarStatus', 0)\n    }\n  },\n  CLOSE_SIDEBAR: (state, withoutAnimation) => {\n    localStorage.setItem('sidebarStatus', 0)\n    state.sidebar.opened = false\n    state.sidebar.withoutAnimation = withoutAnimation\n  },\n  TOGGLE_DEVICE: (state, device) => {\n    state.device = device\n  }\n}\n\nconst actions = {\n  toggleSideBar({ commit }) {\n    commit('TOGGLE_SIDEBAR')\n  },\n  closeSideBar({ commit }, { withoutAnimation }) {\n    commit('CLOSE_SIDEBAR', withoutAnimation)\n  },\n  toggleDevice({ commit }, device) {\n    commit('TOGGLE_DEVICE', device)\n  }\n}\n\nexport default {\n  namespaced: true,\n  state,\n  mutations,\n  actions\n} "
+        }
+    ]
+}

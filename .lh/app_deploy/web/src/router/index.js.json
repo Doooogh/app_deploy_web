@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app_deploy/web/src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1731850253412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1731850831495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,126 @@\n import { createRouter, createWebHistory } from 'vue-router'\n+import Layout from '@/components/layout/Layout.vue'\n \n const routes = [\n   {\n+    path: '/login',\n+    name: 'Login',\n+    component: () => import('@/views/login/index.vue'),\n+    hidden: true\n+  },\n+  {\n     path: '/',\n-    redirect: '/dashboard'\n+    component: Layout,\n+    redirect: '/dashboard',\n+    children: [\n+      {\n+        path: 'dashboard',\n+        name: 'Dashboard',\n+        component: () => import('@/views/dashboard/index.vue'),\n+        meta: { title: '仪表盘', icon: 'el-icon-s-home' }\n+      }\n+    ]\n   },\n   {\n-    path: '/dashboard',\n-    name: 'Dashboard',\n-    component: () => import('@/views/dashboard/index.vue')\n+    path: '/password',\n+    component: Layout,\n+    meta: { title: '密码管理', icon: 'el-icon-key' },\n+    children: [\n+      {\n+        path: 'list',\n+        name: 'PasswordList',\n+        component: () => import('@/views/password/list.vue'),\n+        meta: { title: '密码列表' }\n+      },\n+      {\n+        path: 'add',\n+        name: 'PasswordAdd',\n+        component: () => import('@/views/password/add.vue'),\n+        meta: { title: '添加密码' }\n+      }\n+    ]\n+  },\n+  {\n+    path: '/environment',\n+    component: Layout,\n+    children: [\n+      {\n+        path: 'index',\n+        name: 'Environment',\n+        component: () => import('@/views/environment/index.vue'),\n+        meta: { title: '环境管理', icon: 'el-icon-s-operation' }\n+      }\n+    ]\n+  },\n+  {\n+    path: '/host',\n+    component: Layout,\n+    children: [\n+      {\n+        path: 'index',\n+        name: 'Host',\n+        component: () => import('@/views/host/index.vue'),\n+        meta: { title: '主机管理', icon: 'el-icon-monitor' }\n+      }\n+    ]\n+  },\n+  {\n+    path: '/project',\n+    component: Layout,\n+    children: [\n+      {\n+        path: 'index',\n+        name: 'Project',\n+        component: () => import('@/views/project/index.vue'),\n+        meta: { title: '项目管理', icon: 'el-icon-folder' }\n+      },\n+      {\n+        path: 'version/:id',\n+        name: 'ProjectVersion',\n+        component: () => import('@/views/project/version.vue'),\n+        meta: { title: '版本管理' },\n+        hidden: true\n+      }\n+    ]\n+  },\n+  {\n+    path: '/script',\n+    component: Layout,\n+    children: [\n+      {\n+        path: 'index',\n+        name: 'Script',\n+        component: () => import('@/views/script/index.vue'),\n+        meta: { title: '脚本管理', icon: 'el-icon-document' }\n+      }\n+    ]\n+  },\n+  {\n+    path: '/deploy',\n+    component: Layout,\n+    meta: { title: '发布管理', icon: 'el-icon-s-promotion' },\n+    children: [\n+      {\n+        path: 'create',\n+        name: 'DeployCreate',\n+        component: () => import('@/views/deploy/create.vue'),\n+        meta: { title: '创建发布单' }\n+      },\n+      {\n+        path: 'history',\n+        name: 'DeployHistory',\n+        component: () => import('@/views/deploy/history.vue'),\n+        meta: { title: '发布历史' }\n+      },\n+      {\n+        path: 'detail/:id',\n+        name: 'DeployDetail',\n+        component: () => import('@/views/deploy/detail.vue'),\n+        meta: { title: '发布详情' },\n+        hidden: true\n+      }\n+    ]\n   }\n ]\n \n const router = createRouter({\n"
+                }
+            ],
+            "date": 1731850253412,
+            "name": "Commit-0",
+            "content": "import { createRouter, createWebHistory } from 'vue-router'\n\nconst routes = [\n  {\n    path: '/',\n    redirect: '/dashboard'\n  },\n  {\n    path: '/dashboard',\n    name: 'Dashboard',\n    component: () => import('@/views/dashboard/index.vue')\n  }\n]\n\nconst router = createRouter({\n  history: createWebHistory(),\n  routes\n})\n\nexport default router "
+        }
+    ]
+}

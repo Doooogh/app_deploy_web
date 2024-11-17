@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app_deploy/server/app/config.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731849359905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731849359905,
+            "name": "Commit-0",
+            "content": "from pydantic_settings import BaseSettings\nfrom typing import Optional\n\nclass Settings(BaseSettings):\n    # 基础配置\n    APP_NAME: str = \"App Deploy\"\n    DEBUG: bool = True\n    \n    # 数据库配置\n    DATABASE_URL: str = \"sqlite:///./deploy.db\"\n    \n    # JWT配置\n    SECRET_KEY: str = \"your-secret-key\"\n    ALGORITHM: str = \"HS256\"\n    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 24小时\n    \n    # 文件路径配置\n    UPLOAD_DIR: str = \"./uploads\"\n    LOG_DIR: str = \"./logs\"\n    \n    # Git配置\n    GIT_WORK_DIR: str = \"./workspace\"\n    \n    class Config:\n        env_file = \".env\"\n\nsettings = Settings() "
+        }
+    ]
+}

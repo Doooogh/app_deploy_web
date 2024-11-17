@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/styles/common.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847983627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847983627,
+            "name": "Commit-0",
+            "content": "// 全局通用样式\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml, body {\n  height: 100%;\n  font-size: $--font-size-base;\n  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;\n  -webkit-font-smoothing: antialiased;\n}\n\n// 页面容器通用样式\n.page-container {\n  background: #fff;\n  padding: 20px;\n  border-radius: $--border-radius-base;\n  min-height: calc(100vh - #{$--header-height} - 40px);\n}\n\n// 操作按钮组\n.operation-group {\n  margin-bottom: 20px;\n  \n  .el-button {\n    margin-right: 10px;\n  }\n}\n\n// 搜索表单\n.search-form {\n  padding-bottom: 20px;\n  margin-bottom: 20px;\n  border-bottom: 1px solid $--border-color-lighter;\n  \n  .el-form-item {\n    margin-bottom: 0;\n    margin-right: 20px;\n  }\n}\n\n// 卡片样式\n.info-card {\n  background: #fff;\n  padding: 20px;\n  border-radius: $--border-radius-base;\n  margin-bottom: 20px;\n  box-shadow: $--box-shadow-light;\n  \n  &__title {\n    font-size: $--font-size-large;\n    color: $--color-text-primary;\n    margin-bottom: 20px;\n    font-weight: 500;\n  }\n} "
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/store/modules/tagsView.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731848072993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731848072993,
+            "name": "Commit-0",
+            "content": "const state = {\n  visitedViews: [],\n  cachedViews: []\n}\n\nconst mutations = {\n  ADD_VISITED_VIEW: (state, view) => {\n    if (state.visitedViews.some(v => v.path === view.path)) return\n    state.visitedViews.push(\n      Object.assign({}, view, {\n        title: view.meta.title || 'no-name'\n      })\n    )\n  },\n  ADD_CACHED_VIEW: (state, view) => {\n    if (state.cachedViews.includes(view.name)) return\n    if (!view.meta.noCache) {\n      state.cachedViews.push(view.name)\n    }\n  },\n  DEL_VISITED_VIEW: (state, view) => {\n    for (const [i, v] of state.visitedViews.entries()) {\n      if (v.path === view.path) {\n        state.visitedViews.splice(i, 1)\n        break\n      }\n    }\n  },\n  DEL_CACHED_VIEW: (state, view) => {\n    const index = state.cachedViews.indexOf(view.name)\n    index > -1 && state.cachedViews.splice(index, 1)\n  }\n}\n\nconst actions = {\n  addView({ dispatch }, view) {\n    dispatch('addVisitedView', view)\n    dispatch('addCachedView', view)\n  },\n  addVisitedView({ commit }, view) {\n    commit('ADD_VISITED_VIEW', view)\n  },\n  addCachedView({ commit }, view) {\n    commit('ADD_CACHED_VIEW', view)\n  },\n  delView({ dispatch, state }, view) {\n    return new Promise(resolve => {\n      dispatch('delVisitedView', view)\n      dispatch('delCachedView', view)\n      resolve({\n        visitedViews: [...state.visitedViews],\n        cachedViews: [...state.cachedViews]\n      })\n    })\n  },\n  delVisitedView({ commit, state }, view) {\n    return new Promise(resolve => {\n      commit('DEL_VISITED_VIEW', view)\n      resolve([...state.visitedViews])\n    })\n  },\n  delCachedView({ commit, state }, view) {\n    return new Promise(resolve => {\n      commit('DEL_CACHED_VIEW', view)\n      resolve([...state.cachedViews])\n    })\n  }\n}\n\nexport default {\n  namespaced: true,\n  state,\n  mutations,\n  actions\n} "
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847983779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847983779,
+            "name": "Commit-0",
+            "content": "import Vue from 'vue'\nimport App from './App.vue'\nimport router from './router'\nimport store from './store'\nimport ElementUI from 'element-ui'\nimport 'element-ui/lib/theme-chalk/index.css'\nimport '@/styles/index.scss'\n\nVue.use(ElementUI, {\n  size: 'medium' // 设置 element-ui 默认尺寸\n})\n\nVue.config.productionTip = false\n\nnew Vue({\n  router,\n  store,\n  render: h => h(App)\n}).$mount('#app')\n"
+        }
+    ]
+}

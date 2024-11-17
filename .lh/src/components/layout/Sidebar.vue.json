@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/Sidebar.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731847935393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731847935393,
+            "name": "Commit-0",
+            "content": "<template>\n  <div class=\"sidebar\">\n    <el-menu\n      :default-active=\"activeMenu\"\n      class=\"el-menu-vertical\"\n      background-color=\"#304156\"\n      text-color=\"#bfcbd9\"\n      active-text-color=\"#409EFF\"\n      :collapse=\"isCollapse\"\n      router\n    >\n      <el-menu-item index=\"/dashboard\">\n        <i class=\"el-icon-s-home\"></i>\n        <span slot=\"title\">仪表盘</span>\n      </el-menu-item>\n      \n      <el-submenu index=\"1\">\n        <template slot=\"title\">\n          <i class=\"el-icon-key\"></i>\n          <span>密码管理</span>\n        </template>\n        <el-menu-item index=\"/password/list\">密码列表</el-menu-item>\n        <el-menu-item index=\"/password/add\">添加密码</el-menu-item>\n      </el-submenu>\n\n      <el-menu-item index=\"/environment\">\n        <i class=\"el-icon-s-operation\"></i>\n        <span slot=\"title\">环境管理</span>\n      </el-menu-item>\n\n      <el-menu-item index=\"/host\">\n        <i class=\"el-icon-monitor\"></i>\n        <span slot=\"title\">主机管理</span>\n      </el-menu-item>\n\n      <el-menu-item index=\"/project\">\n        <i class=\"el-icon-folder\"></i>\n        <span slot=\"title\">项目管理</span>\n      </el-menu-item>\n\n      <el-menu-item index=\"/script\">\n        <i class=\"el-icon-document\"></i>\n        <span slot=\"title\">脚本管理</span>\n      </el-menu-item>\n\n      <el-submenu index=\"2\">\n        <template slot=\"title\">\n          <i class=\"el-icon-s-promotion\"></i>\n          <span>发布管理</span>\n        </template>\n        <el-menu-item index=\"/deploy/create\">创建发布单</el-menu-item>\n        <el-menu-item index=\"/deploy/history\">发布历史</el-menu-item>\n      </el-submenu>\n    </el-menu>\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'Sidebar',\n  data() {\n    return {\n      isCollapse: false\n    }\n  },\n  computed: {\n    activeMenu() {\n      return this.$route.path\n    }\n  }\n}\n</script>\n\n<style lang=\"scss\" scoped>\n.sidebar {\n  height: 100%;\n  .el-menu {\n    height: 100%;\n    border: none;\n  }\n  .el-menu-vertical:not(.el-menu--collapse) {\n    width: 200px;\n  }\n}\n</style> "
+        }
+    ]
+}

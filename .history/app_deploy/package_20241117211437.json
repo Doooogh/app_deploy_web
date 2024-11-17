@@ -1,0 +1,14 @@
+{
+  "name": "app_deploy",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev:web": "cd web && npm run dev",
+    "build:web": "cd web && npm run build",
+    "dev:server": "cd server && python main.py",
+    "install:all": "npm install && cd web && npm install && cd ../server && pip install -r requirements.txt"
+  }
+} 

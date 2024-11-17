@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/store/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731848072948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731848072948,
+            "name": "Commit-0",
+            "content": "import Vue from 'vue'\nimport Vuex from 'vuex'\nimport app from './modules/app'\nimport user from './modules/user'\nimport tagsView from './modules/tagsView'\nimport getters from './getters'\n\nVue.use(Vuex)\n\nexport default new Vuex.Store({\n  modules: {\n    app,\n    user,\n    tagsView\n  },\n  getters\n}) "
+        }
+    ]
+}
